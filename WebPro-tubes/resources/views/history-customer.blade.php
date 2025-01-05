@@ -38,10 +38,6 @@
             text-align: center;
         }
 
-        .status-success { color: #198754; font-weight: bold; }
-        .status-pending { color: #ffc107; font-weight: bold; }
-        .status-failed { color: #dc3545; font-weight: bold; }
-
         .btn-confirm {
             background-color: #198754;
             color: white;
@@ -96,7 +92,7 @@
             <h1 class="history-title">Riwayat Transaksi Top-Up</h1>
             <div id="loading" class="text-center d-none">
                 <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Memuat data...</span>
+                    <span class="visually-hidden"></span>
                 </div>
             </div>
             

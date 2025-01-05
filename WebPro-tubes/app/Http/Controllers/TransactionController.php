@@ -30,12 +30,12 @@ class TransactionController extends Controller
     public function cancel(Request $request)
     {
         // Validasi user sebagai admin langsung di controller
-        if (Auth::check() && Auth::user()->role !== 'admin') {
-            return response()->json([
-                'success' => false,
-                'message' => 'Access denied. Admins only.',
-            ], 403);
-        }
+       // if (Auth::check() && Auth::user()->role !== 'admin') {
+       //     return response()->json([
+        //        'success' => false,
+        //        'message' => 'Access denied. Admins only.',
+        //    ], 403);
+       // }
 
         try {
             $transaction = Transaction::findOrFail($request->id);
