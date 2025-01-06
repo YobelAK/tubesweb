@@ -98,7 +98,7 @@
                             <option value="Pending">Pending</option>
                             <option value="Gagal">Gagal</option>
                         </select>
-                                        </div>
+                    </div>
                     <div class="col-md-4">
                         <input type="date" id="date-filter" class="form-control">
                     </div>
