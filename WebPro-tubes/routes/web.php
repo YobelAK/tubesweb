@@ -66,6 +66,5 @@ Route::post('/topup/process', [TopUpController::class, 'process'])->name('topup.
 Route::get('/transactions/history', [TransactionController::class, 'history'])->name('transactions.history');
 Route::post('/transactions/confirm', [TransactionController::class, 'confirm'])->name('transactions.confirm');
 Route::get('/transactions/get', [TransactionController::class, 'getTransactions'])->name('transactions.get');
-Route::post('/transactions/confirm', [TransactionController::class, 'confirm'])->name('transactions.confirm');
 
 

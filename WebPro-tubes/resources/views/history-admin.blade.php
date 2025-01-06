@@ -98,7 +98,7 @@
                             <option value="Pending">Pending</option>
                             <option value="Gagal">Gagal</option>
                         </select>
-                                        </div>
+                    </div>
                     <div class="col-md-4">
                         <input type="date" id="date-filter" class="form-control">
                     </div>
@@ -112,7 +112,7 @@
 
             <div id="loading" class="text-center d-none">
                 <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Memuat data...</span>
+                    <span class="visually-hidden"></span>
                 </div>
             </div>
 
@@ -225,9 +225,6 @@
                         url: '{{ route("transactions.cancel") }}',
                         type: 'POST',
                         data: { id: transactionId },
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
                         success: function(response) {
                             if (response.success) {
                                 alert(response.message);
