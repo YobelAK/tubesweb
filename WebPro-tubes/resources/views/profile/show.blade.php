@@ -157,13 +157,13 @@
                     document.getElementById('phone-display').innerText = data.data.phone || 'Not provided';
                     document.getElementById('email-display').innerText = data.data.email || 'Not provided';
 
-                    responseMessage.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+                    responseMessage.innerHTML = <div class="alert alert-success">${data.message}</div>;
                 } else {
-                    responseMessage.innerHTML = `<div class="alert alert-danger">An error occurred</div>`;
+                    responseMessage.innerHTML = <div class="alert alert-danger">An error occurred</div>;
                 }
             })
             .catch(error => {
-                responseMessage.innerHTML = `<div class="alert alert-danger">Failed to update profile</div>`;
+                responseMessage.innerHTML = <div class="alert alert-danger">Failed to update profile</div>;
             });
         });
     </script>
