@@ -243,17 +243,16 @@
             fetch('/api/current-time')
                 .then(response => response.json())
                 .then(data => {
-                    const formattedTime = data.time; // Misalkan data.time sudah dalam format "H:i:s Y-m-d"
+                    const formattedTime = data.time; 
                     
-                    // Menampilkan waktu dan tanggal
+                    
                     document.getElementById('current-time').innerText = `${formattedTime}`;
                 })
                 .catch(error => console.error('Error fetching time:', error));
         }
 
-        // Fetch time every second
-        setInterval(fetchCurrentTime, 1000);
-        fetchCurrentTime(); // Initial fetch
+        
+        fetchCurrentTime(); 
     </script>
     
     
