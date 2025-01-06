@@ -103,11 +103,11 @@
                     </div>
                     <div class="mb-3">
                         <label class="fw-bold">Phone:</label>
-                        <p>{{ $user->phone ?? 'Not provided' }}</p>
+                        <p id="phone-display">{{ $user->phone ?? 'Not provided' }}</p>
                     </div>
                     <div class="mb-3">
                         <label class="fw-bold">Email:</label>
-                        <p>{{ $user->email ?? 'Not provided' }}</p>
+                        <p id="email-display">{{ $user->email ?? 'Not provided' }}</p>
                     </div>
                     
                     <h3>Update Profile</h3>
@@ -153,6 +153,10 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
+                    // Update halaman secara langsung
+                    document.getElementById('phone-display').innerText = data.data.phone || 'Not provided';
+                    document.getElementById('email-display').innerText = data.data.email || 'Not provided';
+
                     responseMessage.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
                 } else {
                     responseMessage.innerHTML = `<div class="alert alert-danger">An error occurred</div>`;
@@ -163,6 +167,7 @@
             });
         });
     </script>
+
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

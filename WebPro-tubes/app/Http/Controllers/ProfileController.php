@@ -59,6 +59,7 @@ class ProfileController extends Controller
             'data' => $user
         ]);
     }
+
     public function editUser($id)
     {
         $user = User::findOrFail($id);
