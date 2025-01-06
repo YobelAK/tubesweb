@@ -15,8 +15,6 @@ class Transaction extends Model
         'status',
         'metode_pembayaran',
         'username',
-        'created_at',
-        'updated_at',
     ];
 
     public function product()
